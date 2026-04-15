@@ -6,39 +6,75 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <nav className="navbar">
-      <div className="navbar-inner">
-        {/* Logo */}
-        <a href="#beranda" className="navbar-logo">
-          <div className="navbar-logo-box">
-            <Image src="/logo.png" alt="Logo" width={32} height={32} />
+    <nav 
+      style={{ 
+        width: '100%', 
+        position: 'fixed', 
+        top: 0, 
+        left: 0, 
+        zIndex: 9999, // Sangat tinggi supaya tidak tertutup apapun
+        background: 'rgba(10, 10, 10, 0.9)', 
+        backdropFilter: 'blur(15px)',
+        borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
+        margin: 0,
+        padding: 0
+      }}
+    >
+      <div 
+        style={{ 
+          width: '100%', 
+          padding: '0 40px', 
+          height: '80px',
+          display: 'flex', 
+          flexDirection: 'row', // Paksa baris
+          justifyContent: 'space-between', // Paksa Logo kiri, Menu kanan
+          alignItems: 'center',
+          boxSizing: 'border-box'
+        }}
+      >
+        {/* SISI KIRI: LOGO */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
+          <Image src="/logo.png" alt="Logo" width={40} height={40} style={{ flexShrink: 0 }} />
+          <div style={{ display: 'flex', flexDirection: 'column', lineHeight: '1.2' }}>
+            <span style={{ fontWeight: '800', color: 'white', fontSize: '1.1rem', letterSpacing: '1px' }}>
+              KOMANDO SIWeb
+            </span>
+            <span style={{ fontSize: '0.65rem', color: '#a855f7', textTransform: 'uppercase' }}>
+              Monitoring Armada Dunia
+            </span>
           </div>
-          <div className="navbar-logo-text">
-            <span className="navbar-logo-title">KOMANDO SIWeb</span>
-            <span className="navbar-logo-subtitle">Monitoring Armada Dunia</span>
-          </div>
-        </a>
+        </div>
 
-        {/* Mobile Toggle */}
-        <button
-          className="mobile-toggle"
-          onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label="Toggle menu"
-        >
-          {mobileOpen ? "✕" : "☰"}
-        </button>
-
-        {/* Nav Links */}
-        <ul className={`navbar-nav ${mobileOpen ? "open" : ""}`}>
-          <li><a href="#tentang" onClick={() => setMobileOpen(false)}>Tentang</a></li>
-          <li><a href="#fitur" onClick={() => setMobileOpen(false)}>Fitur</a></li>
-          <li><a href="#keunggulan" onClick={() => setMobileOpen(false)}>Keunggulan</a></li>
-          <li>
-            <a href="#masuk" className="btn-primary" onClick={() => setMobileOpen(false)}>
-              MASUK SISTEM
-            </a>
-          </li>
-        </ul>
+        {/* SISI KANAN: NAVIGASI */}
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <ul style={{ 
+            display: 'flex', 
+            flexDirection: 'row', 
+            alignItems: 'center', 
+            listStyle: 'none', 
+            gap: '35px',
+            margin: 0, 
+            padding: 0 
+          }}>
+            <li><a href="#tentang" style={{ color: '#ccc', textDecoration: 'none', fontSize: '0.9rem', fontWeight: '500' }}>Tentang</a></li>
+            <li><a href="#fitur" style={{ color: '#ccc', textDecoration: 'none', fontSize: '0.9rem', fontWeight: '500' }}>Fitur</a></li>
+            <li><a href="#keunggulan" style={{ color: '#ccc', textDecoration: 'none', fontSize: '0.9rem', fontWeight: '500' }}>Keunggulan</a></li>
+            <li>
+              <a href="#masuk" style={{ 
+                padding: '12px 24px', 
+                background: 'linear-gradient(135deg, #6d28d9 0%, #9333ea 100%)', 
+                borderRadius: '6px',
+                color: 'white',
+                textDecoration: 'none',
+                fontWeight: 'bold',
+                fontSize: '0.85rem',
+                boxShadow: '0 4px 15px rgba(126, 34, 206, 0.3)'
+              }}>
+                MASUK SISTEM
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
   );
