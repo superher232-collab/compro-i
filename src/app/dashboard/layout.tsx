@@ -128,16 +128,19 @@ export default function DashboardLayout({ children }) {
             )}
           </div>
 
-          <Link href="#" style={{
+          <Link href="/dashboard/fleet" style={{
+            background: pathname === '/dashboard/fleet' || pathname.startsWith('/dashboard/fleet/') ? 'linear-gradient(90deg, #A855F7 0%, #9249F2 50%, #7C3AED 100%)' : 'transparent',
             padding: '8px 16px',
-            color: 'var(--text-muted, #8B7BA8)',
+            borderRadius: '4px',
+            color: pathname === '/dashboard/fleet' || pathname.startsWith('/dashboard/fleet/') ? 'white' : 'var(--text-muted, #8B7BA8)',
             textDecoration: 'none',
             fontSize: '12px',
             display: 'flex',
             alignItems: 'center',
             gap: '8px',
             fontWeight: 'bold',
-            letterSpacing: '1px'
+            letterSpacing: '1px',
+            boxShadow: pathname === '/dashboard/fleet' || pathname.startsWith('/dashboard/fleet/') ? '0 0 15px rgba(168, 85, 247, 0.4)' : 'none'
           }}>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path>
@@ -145,16 +148,19 @@ export default function DashboardLayout({ children }) {
             </svg>
             ARMADA
           </Link>
-          <Link href="#" style={{
+          <Link href="/dashboard/map" style={{
+            background: pathname === '/dashboard/map' || pathname.startsWith('/dashboard/map/') ? 'linear-gradient(90deg, #A855F7 0%, #9249F2 50%, #7C3AED 100%)' : 'transparent',
             padding: '8px 16px',
-            color: 'var(--text-muted, #8B7BA8)',
+            borderRadius: '4px',
+            color: pathname === '/dashboard/map' || pathname.startsWith('/dashboard/map/') ? 'white' : 'var(--text-muted, #8B7BA8)',
             textDecoration: 'none',
             fontSize: '12px',
             display: 'flex',
             alignItems: 'center',
             gap: '8px',
             fontWeight: 'bold',
-            letterSpacing: '1px'
+            letterSpacing: '1px',
+            boxShadow: pathname === '/dashboard/map' || pathname.startsWith('/dashboard/map/') ? '0 0 15px rgba(168, 85, 247, 0.4)' : 'none'
           }}>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"></polygon>
@@ -163,16 +169,19 @@ export default function DashboardLayout({ children }) {
             </svg>
             PETA
           </Link>
-          <Link href="#" style={{
+          <Link href="/dashboard/analytics" style={{
+            background: pathname === '/dashboard/analytics' || pathname.startsWith('/dashboard/analytics/') ? 'linear-gradient(90deg, #A855F7 0%, #9249F2 50%, #7C3AED 100%)' : 'transparent',
             padding: '8px 16px',
-            color: 'var(--text-muted, #8B7BA8)',
+            borderRadius: '4px',
+            color: pathname === '/dashboard/analytics' || pathname.startsWith('/dashboard/analytics/') ? 'white' : 'var(--text-muted, #8B7BA8)',
             textDecoration: 'none',
             fontSize: '12px',
             display: 'flex',
             alignItems: 'center',
             gap: '8px',
             fontWeight: 'bold',
-            letterSpacing: '1px'
+            letterSpacing: '1px',
+            boxShadow: pathname === '/dashboard/analytics' || pathname.startsWith('/dashboard/analytics/') ? '0 0 15px rgba(168, 85, 247, 0.4)' : 'none'
           }}>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
