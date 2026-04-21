@@ -60,7 +60,7 @@ export default function Navbar() {
             <li><a href="#fitur" style={{ color: '#ccc', textDecoration: 'none', fontSize: '0.9rem', fontWeight: '500' }}>Fitur</a></li>
             <li><a href="#keunggulan" style={{ color: '#ccc', textDecoration: 'none', fontSize: '0.9rem', fontWeight: '500' }}>Keunggulan</a></li>
             <li>
-              <a href="#masuk" style={{ 
+              <a href="/login" style={{ 
                 padding: '12px 24px', 
                 background: 'linear-gradient(135deg, #6d28d9 0%, #9333ea 100%)', 
                 borderRadius: '6px',
